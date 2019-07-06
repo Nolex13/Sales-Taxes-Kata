@@ -6,6 +6,7 @@ public class BaseProduct implements IProduct {
     protected Integer quantity = 0;
     protected String name = "Unknown";
     protected Integer price = 0;
+    protected boolean imported = false;
 
     public Integer getQuantity() {
         return quantity;
@@ -19,8 +20,13 @@ public class BaseProduct implements IProduct {
         return name;
     }
 
-    public Integer getPrice() {
-        return price;
+    @Override
+    public void setAsImported(boolean imported) {
+        this.imported = imported;
+    }
+
+    public float getPrice() {
+        return ((float)(price * quantity)/100);
     }
 
     public void setPrice(Integer price) {
@@ -32,6 +38,11 @@ public class BaseProduct implements IProduct {
     }
 
     public float getTax() {
+        return getImportTax();
+    }
+
+    protected float getImportTax(){
+        if(imported) return (getPrice()*5/100);
         return 0.0f;
     }
 }
