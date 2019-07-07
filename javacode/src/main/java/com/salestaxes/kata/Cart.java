@@ -2,6 +2,7 @@ package com.salestaxes.kata;
 
 import com.salestaxes.kata.interfaces.IProduct;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,18 +13,18 @@ public class Cart {
         products.add(product);
     }
 
-    public float getTotalTaxes(){
-        float result = 0;
+    public BigDecimal getTotalTaxes(){
+        BigDecimal result = new BigDecimal("0.00");
         for(IProduct product: products){
-            result += product.getTax();
+            result = result.add(product.getTax());
         }
         return result;
     }
 
-    public float getTotal(){
-        float result = 0;
+    public BigDecimal getTotal(){
+        BigDecimal result = new BigDecimal("0.00");
         for(IProduct product: products){
-            result += product.getPrice() + product.getTax();
+            result = result.add(product.getFinalPrice());
         }
         return result;
     }

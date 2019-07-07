@@ -1,12 +1,14 @@
 package com.salestaxes.kata.interfaces;
 
+import java.math.BigDecimal;
+
 public interface IProduct {
     Integer getQuantity();
     void setQuantity(Integer quantity);
-    float getPrice();
-    void setPrice(Integer price);
-    void setPrice(float price);
-    float getTax();
+    BigDecimal getPrice();
+    void setPrice(BigDecimal price);
+    BigDecimal getTax();
     String getName();
     void setAsImported(boolean imported);
+    BigDecimal getFinalPrice();
 }

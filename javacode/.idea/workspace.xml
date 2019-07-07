@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf79fda-46b9-41ac-911c-c64c19f78b8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/BottlePerfume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/BoxChocolates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/ChocolateBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/HeadachePills.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/utilities/BigDecimalUtilites.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/BaseProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/BaseProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/TaxedProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/TaxedProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/interfaces/IProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/interfaces/IProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/salestaxes/kata/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/salestaxes/kata/AppTest.java" afterDir="false" />
@@ -29,8 +26,66 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/salestaxes/kata/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="67" column="58" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
+            <state relative-caret-position="103">
+              <caret line="153" column="51" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
+              <folding>
+                <element signature="method#roundToNearest5Cent#0;class#AppTest#0" />
+                <element signature="method#shouldCalculatePriceForEachProduct#0;class#AppTest#0" />
+                <element signature="method#shouldCalculatePriceForEachProduct1#1;class#AppTest#0" />
+                <element signature="method#shouldCalculateValuesForInput1#0;class#AppTest#0" />
+                <element signature="method#shouldCalculateValuesForInput2#0;class#AppTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/BaseProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+                <element signature="e#1070#1071#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/interfaces/IProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/TaxedProduct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,14 +116,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/MusicCD.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/MusicCd.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/ChocolateBar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/BoxChocolates.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/BottlePerfume.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/products/HeadachePills.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/interfaces/IProduct.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/salestaxes/kata/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/utilities/BigDecimalUtilites.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/TaxedProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/interfaces/IProduct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/BaseProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/salestaxes/kata/AppTest.java" />
       </list>
     </option>
   </component>
@@ -79,7 +135,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1572" />
     <option name="width" value="1017" />
     <option name="height" value="549" />
@@ -90,7 +146,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,6 +176,23 @@
               <item name="salestaxes" type="b2602c69:ProjectViewProjectNode" />
               <item name="javacode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kata" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salestaxes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javacode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kata" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="salestaxes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="javacode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -141,7 +214,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,7 +239,7 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.AppTest.shouldCalculateValuesForInput3">
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.roundToNearest5Cent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="javacode" />
       <extension name="coverage">
         <pattern>
@@ -176,12 +249,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.salestaxes.kata" />
       <option name="MAIN_CLASS_NAME" value="com.salestaxes.kata.AppTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="roundToNearest5Cent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.shouldCalculateTaxesForInput1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.shouldCalculatePriceForEachProduct1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="javacode" />
       <extension name="coverage">
         <pattern>
@@ -191,7 +265,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.salestaxes.kata" />
       <option name="MAIN_CLASS_NAME" value="com.salestaxes.kata.AppTest" />
-      <option name="METHOD_NAME" value="shouldCalculateTaxesForInput1" />
+      <option name="METHOD_NAME" value="shouldCalculatePriceForEachProduct1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -248,10 +322,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AppTest.shouldCalculateValuesForInput3" />
-        <item itemvalue="JUnit.AppTest.shouldCalculateValuesForInput2" />
+        <item itemvalue="JUnit.AppTest.shouldCalculatePriceForEachProduct1" />
         <item itemvalue="JUnit.AppTest.shouldCalculateValuesForInput1" />
-        <item itemvalue="JUnit.AppTest.shouldCalculateTaxesForInput1" />
-        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.shouldCalculateValuesForInput2" />
+        <item itemvalue="JUnit.AppTest.roundToNearest5Cent" />
       </list>
     </recent_temporary>
   </component>
@@ -269,41 +343,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_shouldCalculateValuesForInput2 - 2019.07.06 at 12h 00m 36s.xml">
+    <history-entry file="AppTest_shouldCalculateValuesForInput2 - 2019.07.07 at 10h 41m 56s.xml">
       <configuration name="AppTest.shouldCalculateValuesForInput2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 00m 51s.xml">
-      <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 01m 44s.xml">
-      <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 03m 34s.xml">
-      <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 03m 48s.xml">
-      <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 06m 10s.xml">
-      <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput2 - 2019.07.06 at 12h 09m 33s.xml">
+    <history-entry file="AppTest_shouldCalculateValuesForInput2 - 2019.07.07 at 10h 46m 30s.xml">
       <configuration name="AppTest.shouldCalculateValuesForInput2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 11m 21s.xml">
+    <history-entry file="AppTest_shouldCalculateValuesForInput2 - 2019.07.07 at 10h 47m 22s.xml">
+      <configuration name="AppTest.shouldCalculateValuesForInput2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_shouldCalculateValuesForInput2 - 2019.07.07 at 10h 47m 30s.xml">
+      <configuration name="AppTest.shouldCalculateValuesForInput2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.07 at 10h 56m 10s.xml">
       <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 11m 28s.xml">
+    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.07 at 10h 58m 11s.xml">
       <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.06 at 12h 12m 14s.xml">
+    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.07 at 11h 03m 44s.xml">
       <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_shouldCalculateValuesForInput3 - 2019.07.07 at 11h 10m 33s.xml">
+      <configuration name="AppTest.shouldCalculateValuesForInput3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_shouldCalculateValuesForInput1 - 2019.07.07 at 11h 10m 54s.xml">
+      <configuration name="AppTest.shouldCalculateValuesForInput1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_shouldCalculatePriceForEachProduct1 - 2019.07.07 at 11h 14m 55s.xml">
+      <configuration name="AppTest.shouldCalculatePriceForEachProduct1" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1519" height="977" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25291297" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25633997" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -315,7 +390,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289941" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3289941" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3289941" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -330,39 +405,51 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java</url>
-          <line>18</line>
+          <line>26</line>
           <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/TaxedProduct.java</url>
-          <line>6</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/BaseProduct.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="product.getTax()" language="JAVA" />
-        <watch expression="getNormalTax()" language="JAVA" />
-        <watch expression="getImportTax()" language="JAVA" />
         <watch expression="product.getPrice()" language="JAVA" />
-        <watch expression="(float)(quantity*price) / 100" language="JAVA" />
-        <watch expression="name" language="JAVA" />
-        <watch expression="getTax()" language="JAVA" />
-        <watch expression="getPrice()" language="JAVA" />
+        <watch expression="product.getTax()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>product.getTax()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>product.getPrice()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>product.getName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.imported</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getImportTax()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getPrice().divide(new BigDecimal(&quot;10.00&quot;))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>getPrice()</expression-string>
         <language-id>JAVA</language-id>
@@ -375,41 +462,6 @@
       </expression>
       <expression>
         <expression-string>name</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getImportTax()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getNormalTax()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(float)(quantity*price) / 100</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>(float)(quantity*price)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>quantity*price</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>product.getPrice()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>product.getTax()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -469,52 +521,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/utilities/BigDecimalUtilites.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="120">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/TaxedProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="312">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
           <folding>
-            <element signature="e#173#174#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/interfaces/IProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state relative-caret-position="288">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/BaseProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+        <state relative-caret-position="202">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="35" />
           <folding>
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/salestaxes/kata/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/salestaxes/kata/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="67" column="58" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
+        <state relative-caret-position="103">
+          <caret line="153" column="51" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
+          <folding>
+            <element signature="method#roundToNearest5Cent#0;class#AppTest#0" />
+            <element signature="method#shouldCalculatePriceForEachProduct#0;class#AppTest#0" />
+            <element signature="method#shouldCalculatePriceForEachProduct1#1;class#AppTest#0" />
+            <element signature="method#shouldCalculateValuesForInput1#0;class#AppTest#0" />
+            <element signature="method#shouldCalculateValuesForInput2#0;class#AppTest#0" />
+          </folding>
         </state>
       </provider>
     </entry>

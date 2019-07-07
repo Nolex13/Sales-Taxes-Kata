@@ -1,11 +1,14 @@
 package com.salestaxes.kata;
 
 import com.salestaxes.kata.interfaces.IProduct;
+import com.salestaxes.kata.utilities.BigDecimalUtilites;
+
+import java.math.BigDecimal;
 
 public class BaseProduct implements IProduct {
     protected Integer quantity = 0;
     protected String name = "Unknown";
-    protected Integer price = 0;
+    protected BigDecimal price = new BigDecimal("0.00");
     protected boolean imported = false;
 
     public Integer getQuantity() {
@@ -20,29 +23,32 @@ public class BaseProduct implements IProduct {
         return name;
     }
 
-    @Override
     public void setAsImported(boolean imported) {
         this.imported = imported;
     }
 
-    public float getPrice() {
-        return ((float)(price * quantity)/100);
+    public BigDecimal getFinalPrice() {
+        return getPrice().add(getTax());
     }
 
-    public void setPrice(Integer price) {
+    public BigDecimal getPrice() {
+        return price.multiply(new BigDecimal(quantity));
+    }
+
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
-    public void setPrice(float price) {
-        this.price = (int) (price*100);
+    public void setPrice(String price) {
+        this.price = new BigDecimal(price);
     }
 
-    public float getTax() {
-        return getImportTax();
+    public BigDecimal getTax() {
+        return BigDecimalUtilites.round(getImportTax());
     }
 
-    protected float getImportTax(){
-        if(imported) return (getPrice()*5/100);
-        return 0.0f;
+    protected BigDecimal getImportTax(){
+        if(imported)return getPrice().multiply(new BigDecimal("0.05"));
+        return new BigDecimal("0.00");
     }
 }

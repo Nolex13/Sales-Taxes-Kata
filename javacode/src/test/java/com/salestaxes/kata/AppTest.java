@@ -4,7 +4,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import com.salestaxes.kata.products.*;
+import com.salestaxes.kata.utilities.BigDecimalUtilites;
 import org.junit.Test;
+
+import java.math.BigDecimal;
 
 /**
  * Unit test for simple App.
@@ -12,66 +15,143 @@ import org.junit.Test;
 public class AppTest 
 {
     @Test
-    public void shouldCalculateValuesForInput1() {
+    public void roundToNearest5Cent(){
+        assertEquals(
+                new BigDecimal("1.05"),
+                BigDecimalUtilites.round(new BigDecimal("1.03")));
+        assertEquals(
+                new BigDecimal("1.10"),
+                BigDecimalUtilites.round(new BigDecimal("1.051")));
+        assertEquals(
+                new BigDecimal("1.05"),
+                BigDecimalUtilites.round(new BigDecimal("1.05")));
+        assertEquals(
+                new BigDecimal("1.95"),
+                BigDecimalUtilites.round(new BigDecimal("1.900001")));
+    }
+
+    @Test
+    public void shouldCalculatePriceForEachProduct1(){
         Book book = new Book();
         book.setQuantity(1);
-        book.setPrice(12.49f);
+        book.setPrice(new BigDecimal("12.49"));
 
         MusicCd musicCd = new MusicCd();
         musicCd.setQuantity(1);
-        musicCd.setPrice(14.99f);
+        musicCd.setPrice(new BigDecimal("14.99"));
 
         ChocolateBar chocolateBar = new ChocolateBar();
         chocolateBar.setQuantity(1);
-        chocolateBar.setPrice(0.85f);
+        chocolateBar.setPrice(new BigDecimal("0.85"));
+
+        assertEquals(new BigDecimal("12.49"), book.getFinalPrice());
+        assertEquals(new BigDecimal("16.49"), musicCd.getFinalPrice());
+        assertEquals(new BigDecimal("0.85"), chocolateBar.getFinalPrice());
+    }
+
+    @Test
+    public void shouldCalculatePriceForEachProduct2(){
+        BoxChocolates boxChocolates = new BoxChocolates();
+        boxChocolates.setQuantity(1);
+        boxChocolates.setPrice(new BigDecimal("10.00"));
+        boxChocolates.setAsImported(true);
+
+        BottlePerfume bottlePerfume = new BottlePerfume();
+        bottlePerfume.setQuantity(1);
+        bottlePerfume.setPrice(new BigDecimal("47.50"));
+        bottlePerfume.setAsImported(true);
+
+        assertEquals(new BigDecimal("10.50"), boxChocolates.getFinalPrice());
+        assertEquals(new BigDecimal("54.65"), bottlePerfume.getFinalPrice());
+    }
+
+    @Test
+    public void shouldCalculatePriceForEachProduct3(){
+        BottlePerfume impBottlePerfume = new BottlePerfume();
+        impBottlePerfume.setQuantity(1);
+        impBottlePerfume.setPrice(new BigDecimal("27.99"));
+        impBottlePerfume.setAsImported(true);
+
+        BottlePerfume bottlePerfume = new BottlePerfume();
+        bottlePerfume.setQuantity(1);
+        bottlePerfume.setPrice(new BigDecimal("18.99"));
+
+        HeadachePills headachePills = new HeadachePills();
+        headachePills.setQuantity(1);
+        headachePills.setPrice(new BigDecimal("9.75"));
+
+        BoxChocolates boxChocolates = new BoxChocolates();
+        boxChocolates.setQuantity(1);
+        boxChocolates.setPrice(new BigDecimal("11.25"));
+        boxChocolates.setAsImported(true);
+
+        assertEquals(new BigDecimal("32.19"), impBottlePerfume.getFinalPrice());
+        assertEquals(new BigDecimal("20.89"), bottlePerfume.getFinalPrice());
+        assertEquals(new BigDecimal("9.75"), headachePills.getFinalPrice());
+        assertEquals(new BigDecimal("11.85"), boxChocolates.getFinalPrice());
+    }
+
+    @Test
+    public void shouldCalculateValuesForInput1() {
+        Book book = new Book();
+        book.setQuantity(1);
+        book.setPrice(new BigDecimal("12.49"));
+
+        MusicCd musicCd = new MusicCd();
+        musicCd.setQuantity(1);
+        musicCd.setPrice(new BigDecimal("14.99"));
+
+        ChocolateBar chocolateBar = new ChocolateBar();
+        chocolateBar.setQuantity(1);
+        chocolateBar.setPrice(new BigDecimal("0.85"));
 
         Cart cart = new Cart();
         cart.add(book);
         cart.add(musicCd);
         cart.add(chocolateBar);
 
-        assertEquals(1.50f, cart.getTotalTaxes(), 2);
-        assertEquals(29.83f, cart.getTotal(), 2);
+        assertEquals(new BigDecimal("1.50"), cart.getTotalTaxes());
+        assertEquals(new BigDecimal("29.83"), cart.getTotal());
     }
 
     @Test
     public void shouldCalculateValuesForInput2() {
         BoxChocolates boxChocolates = new BoxChocolates();
         boxChocolates.setQuantity(1);
-        boxChocolates.setPrice(10.00f);
+        boxChocolates.setPrice(new BigDecimal("10.00"));
         boxChocolates.setAsImported(true);
 
         BottlePerfume bottlePerfume = new BottlePerfume();
         bottlePerfume.setQuantity(1);
-        bottlePerfume.setPrice(47.50f);
-        boxChocolates.setAsImported(true);
+        bottlePerfume.setPrice(new BigDecimal("47.50"));
+        bottlePerfume.setAsImported(true);
 
         Cart cart = new Cart();
         cart.add(boxChocolates);
         cart.add(bottlePerfume);
 
-        assertEquals(7.65f, cart.getTotalTaxes(), 2);
-        assertEquals(65.15f, cart.getTotal(), 2);
+        assertEquals(new BigDecimal("7.65"), cart.getTotalTaxes());
+        assertEquals(new BigDecimal("65.15"), cart.getTotal());
     }
 
     @Test
     public void shouldCalculateValuesForInput3() {
         BottlePerfume impBottlePerfume = new BottlePerfume();
         impBottlePerfume.setQuantity(1);
-        impBottlePerfume.setPrice(27.99f);
+        impBottlePerfume.setPrice(new BigDecimal("27.99"));
         impBottlePerfume.setAsImported(true);
 
         BottlePerfume bottlePerfume = new BottlePerfume();
         bottlePerfume.setQuantity(1);
-        bottlePerfume.setPrice(18.99f);
+        bottlePerfume.setPrice(new BigDecimal("18.99"));
 
         HeadachePills headachePills = new HeadachePills();
         headachePills.setQuantity(1);
-        headachePills.setPrice(9.75f);
+        headachePills.setPrice(new BigDecimal("9.75"));
 
         BoxChocolates boxChocolates = new BoxChocolates();
         boxChocolates.setQuantity(1);
-        boxChocolates.setPrice(11.85f);
+        boxChocolates.setPrice(new BigDecimal("11.25"));
         boxChocolates.setAsImported(true);
 
         Cart cart = new Cart();
@@ -80,7 +160,7 @@ public class AppTest
         cart.add(headachePills);
         cart.add(boxChocolates);
 
-        assertEquals(6.70f, cart.getTotalTaxes(), 2);
-        assertEquals(74.68f, cart.getTotal(), 2);
+        assertEquals(new BigDecimal("6.70"), cart.getTotalTaxes());
+        assertEquals(new BigDecimal("74.68"), cart.getTotal());
     }
 }
