@@ -28,4 +28,19 @@ public class Cart {
         }
         return result;
     }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for(IProduct product: products){
+            result += product.getQuantity() + " "
+                    + (product.isImported() ? "imported " : "")
+                    + product.getName() + ": "
+                    + product.getFinalPrice() + "\n";
+        }
+        result += "Sales Taxes: " + getTotalTaxes() + "\n";
+        result += "Total: " + getTotal();
+
+        return result;
+    }
 }

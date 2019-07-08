@@ -27,6 +27,10 @@ public class BaseProduct implements IProduct {
         this.imported = imported;
     }
 
+    public boolean isImported() {
+        return imported;
+    }
+
     public BigDecimal getFinalPrice() {
         return getPrice().add(getTax());
     }

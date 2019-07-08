@@ -10,5 +10,6 @@ public interface IProduct {
     BigDecimal getTax();
     String getName();
     void setAsImported(boolean imported);
+    boolean isImported();
     BigDecimal getFinalPrice();
 }

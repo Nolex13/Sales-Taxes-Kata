@@ -163,4 +163,32 @@ public class AppTest
         assertEquals(new BigDecimal("6.70"), cart.getTotalTaxes());
         assertEquals(new BigDecimal("74.68"), cart.getTotal());
     }
+
+    @Test
+    public void shouldCalculateValuesForProductsWithMoreQuantities() {
+        Book book = new Book();
+        book.setQuantity(2);
+        book.setPrice(new BigDecimal("12.49"));
+        //24.98
+
+        MusicCd musicCd = new MusicCd();
+        musicCd.setQuantity(3);
+        musicCd.setPrice(new BigDecimal("14.99"));
+        musicCd.setAsImported(true);
+        //44.97 + 4,50 + 2,25 = 6,75 | 51,72
+
+        ChocolateBar chocolateBar = new ChocolateBar();
+        chocolateBar.setQuantity(2);
+        chocolateBar.setPrice(new BigDecimal("0.85"));
+        chocolateBar.setAsImported(true);
+        //1,7 + 0,10 = 0,10 | 1,8
+
+        Cart cart = new Cart();
+        cart.add(book);
+        cart.add(musicCd);
+        cart.add(chocolateBar);
+
+        assertEquals(new BigDecimal("6.85"), cart.getTotalTaxes());
+        assertEquals(new BigDecimal("78.50"), cart.getTotal());
+    }
 }
