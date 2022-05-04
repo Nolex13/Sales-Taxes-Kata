@@ -1,19 +1,15 @@
 package com.salestaxes.kata;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import com.salestaxes.kata.products.*;
 import com.salestaxes.kata.utilities.BigDecimalUtilites;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-{
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class AppTest {
     @Test
     public void roundToNearest5Cent(){
         assertEquals(
